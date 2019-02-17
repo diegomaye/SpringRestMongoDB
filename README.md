@@ -1,2 +1,2 @@
 # SpringRestMongoDB
-Project to play with spring mongodb
+Project created to play with springboot and mongodb
