@@ -1,0 +1,27 @@
+use db_prueba
+db.createCollection("merchant");
+db.merchant.insertMany([
+  {
+    "merchant_id" : "1",
+    "description" : "Tienda Inglesa"
+  },
+  {
+    "merchant_id" : "2",
+    "description" : "Devoto"
+  },
+  {
+    "merchant_id" : "3",
+    "description" : "Macro Mercado"
+  }
+]);
+db.createCollection("sale");
+db.createCollection("exchange");
+
+use admin
+db.createUser(
+  {
+    user: "db_prueba",
+    pwd: "db_prueba123",
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+  }
+);
